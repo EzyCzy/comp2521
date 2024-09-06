@@ -22,3 +22,7 @@ Copy the temporary array back to the original array
 O(n) to merge two sorted subarrays
 
 Total O(nlogn)
+
+Stable
+adaptive
+not in-place
