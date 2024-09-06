@@ -7,4 +7,5 @@ Stable
 Adaptive
 In-place
 
+if sorted O(n)
 O(n^2)
