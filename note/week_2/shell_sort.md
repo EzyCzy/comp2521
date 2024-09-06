@@ -10,5 +10,5 @@ if h_(i+1) = 3h_i + 1
 O(n^3/2)
 
 Not stable
-Not adaptive
+Adaptive (generalisation of insertion sort)
 In-place
