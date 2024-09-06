@@ -11,3 +11,7 @@ Worst case
 C = n(n-1)/2
 S = n(n-1)/2
 O(n^2)
+
+Stable
+Adaptive
+In-place
