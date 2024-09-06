@@ -17,3 +17,7 @@ C = n-1 + n-2 + ... + 1 = (n-1)(n)/2
 S = n-1
 
 O(n^2)
+
+Not stable
+Not adaptive
+In-place
