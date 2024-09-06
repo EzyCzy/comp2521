@@ -24,5 +24,5 @@ O(n) to merge two sorted subarrays
 Total O(nlogn)
 
 Stable
-adaptive
+not adaptive
 not in-place
