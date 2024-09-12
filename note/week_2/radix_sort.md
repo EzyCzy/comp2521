@@ -23,3 +23,15 @@ Perform stable sort on k_m
 Perform stable sort on k_(m-1)
 ...
 Perform stable sort on k_1
+
+stable sort takes O(n + R)
+so m stable sorts is O(m*n) given that R is small. Radix sort performs better than comparison-based sorting when keys is short and array are large
+
+Stable
+Not adaptive
+Not in place
+
+others non-comparison-based sorts
+Bucket sort
+MSD radix sort
+Key-indexed counting sort
