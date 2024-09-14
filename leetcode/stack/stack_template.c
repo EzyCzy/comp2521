@@ -8,18 +8,18 @@ struct stack {
 struct node {
     int val;
     struct node *next;
-}
+};
 
 Stack StackNew(void){
 
     Stack new_stack = malloc(sizeof(struct stack));
     new_stack->size = 0;
-    new_stack->head = NULL:
+    new_stack->head = NULL;
 
     return new_stack;
 }
 
-Stack StackFree(Stack s){
+void StackFree(Stack s){
 
     struct node *cur = s->head;
     while(cur != NULL){
@@ -30,7 +30,7 @@ Stack StackFree(Stack s){
     free(s);
 }
 
-Stack StackPush(Stack s, int val){
+void StackPush(Stack s, int val){
 
     struct node *new_node = malloc(sizeof(*new_node));
 
