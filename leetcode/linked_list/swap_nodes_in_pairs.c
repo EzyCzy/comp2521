@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/swap-nodes-in-pairs/description/
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -30,5 +32,8 @@ struct ListNode* swapPairs(struct ListNode* head) {
     dummy->next = head;
 
     swapCall(dummy);
-    return dummy->next;
+    
+    struct ListNode *ans = dummy->next;
+    free(dummy);
+    return ans;
 }
