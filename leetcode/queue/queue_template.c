@@ -2,12 +2,14 @@ struct queue {
     struct node *head;
     struct node *tail;
     int size;
-}
+};
 
 struct node {
     int val;
     struct node *next;
-}
+};
+
+typedef struct queue * Queue;
 
 Queue QueueNew(void){
     Queue q = malloc(sizeof(struct queue));
@@ -31,14 +33,14 @@ void QueueFree(Queue q){
 
 struct node *newNode(int val){
     struct node *n = malloc(sizeof(*n));
-    n->val = it;
+    n->val = val;
     n->next = NULL;
     return n;
 }
 
 void QueueEnqueue (Queue q, int val){
 
-    struct node *n = newNode(it);
+    struct node *n = newNode(val);
     if(q->size == 0){
         q->head = n;
     } else {
