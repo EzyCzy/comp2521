@@ -16,7 +16,9 @@ Final, 1 comparison, 1 swap
 C = n-1 + n-2 + ... + 1 = (n-1)(n)/2
 S = n-1
 
-O(n^2)
+Worst Case: O(n^2)
+Average Case: 
+Best Case: 
 
 Not stable
 Not adaptive
