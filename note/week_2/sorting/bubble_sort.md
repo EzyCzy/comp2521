@@ -6,7 +6,8 @@ Method:
 
 if sorted O(n) no comparison
 
-Worst case
+Worst case: O(n^2) - reverse sorted or first and final swapped
+Best case: O(n)
 
 C = n(n-1)/2
 S = n(n-1)/2
