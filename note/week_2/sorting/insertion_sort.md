@@ -7,5 +7,7 @@ Stable
 Adaptive
 In-place
 
-if sorted O(n)
-O(n^2)
+Worst Case: O(n^2)
+Average Case
+Best Case: O(n)
+
