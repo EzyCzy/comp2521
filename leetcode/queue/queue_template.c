@@ -1,6 +1,6 @@
 struct queue {
-    struct node *head;
-    struct node *tail;
+    void *head;
+    void *tail;
     int size;
 };
 
