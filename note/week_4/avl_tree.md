@@ -23,5 +23,8 @@ Right left (Right and the left of this child is heavy)
 - Rationale: We want a right-right situtation, so we do this by rotating to right on right left
 
 Maintaining Height Data
+Insertion
 - When a node is inserted (all ancestors may be affected)
 - When a rotation is performed (original and new root may be affected)
+Deletion
+- all nodes on the deletion path may be affected
