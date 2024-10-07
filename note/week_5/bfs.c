@@ -14,3 +14,14 @@ bfs (G, src):
         visited[w] = true
         predecessor[w] = v
         enqueue w into Q
+
+bfsFindPath (G, src, dest):
+  Input: graph G, vertices src and dest
+
+  ... BFS starting from src ...
+  if predecessor[dest] != -1:
+    v = dest
+    while v != src:
+      print v, "<-"
+      v = predecessor[v]
+    print src
