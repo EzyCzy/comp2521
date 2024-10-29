@@ -44,3 +44,28 @@ while set of vertices is not empty:
 dist and pred array 
 - contains data about the shortest path discovered so far
 - need to be updaed if a shorter path to some vertex is found
+
+ways to implement vSet
+1. visited array
+ - BFS/DFS
+ - Array of V boolean, default false
+ - After exploring vertex v, set visited[v] to true
+ - At the start of each iteration, find vertex v such that visited[v] is false and dist[v] is 
+minimal O(V), overall O(E+V^2) O(V^2)
+2. array/list of vertices
+  - store all vertices in an array/linkedlist
+  - after exploring vertex v, remove v from array/linked list
+  - at the start of each iteration, find vertex in array/list such that dist[v] is minimal O(v)
+  - overall O(E+V^2), O(V^2)
+3. priority queue
+    - an ADT
+    - insert item with priority
+    - remove item with highest priority
+  use priority queue to store vertices, use distance to vertex as priority
+  a good priority queue implementation has O(log n) insert and delete
+  - overall O(E+VlogV), O(V log V)
+
+other shortest path
+floyd-warshall
+bellman-ford
+    
