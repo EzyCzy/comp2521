@@ -67,3 +67,7 @@ cost of deletion:
 1. replace root by item at the end
 2. fix down considers two items on each level in the worst case
 worse case is O(log n)
+
+
+pq cost
+![image](https://github.com/user-attachments/assets/c3564ce8-6f77-45fb-b7d1-288f1216240e)
