@@ -45,3 +45,25 @@ For an item at index i:
 - Its left child is located at index 2*i
 - Its right child is located at index 2*+1
 - its parent is located at index floor(i/2)
+
+insertion 
+- add new item at next available position on bottom level, new item may violate the heap property
+- fix up: while new item is greater than its parent, swap with its parent this reorganises items along the path to the root and restores the heap property
+
+cost of insertion
+- add new item after last item O(1)
+- fixing O(log n)
+worst case is O(log n)
+
+deletion is a three step process
+1. Replace root item with last item
+  - last item = bottom-most/rightmost item
+  - let this item be i
+2. remove last item
+3. fix down: while is less than its greater child, swap it with its greater child
+
+
+cost of deletion:
+1. replace root by item at the end
+2. fix down considers two items on each level in the worst case
+worse case is O(log n)
