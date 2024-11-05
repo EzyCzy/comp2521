@@ -37,6 +37,30 @@ int HashTableGet(HashTable ht, int key) {
   error;
 }
 
+void HashTableInsert(HashTable table, int key, int value) {
+	if (table->numItems >= table->numSlots * MAX_LOAD_FACTOR) {
+		resize(table);
+	}
+
+  int i = hash(key, table->numSlots);
+
+  for (int j = 0; j < table->numSlots; j++) {
+    if (table->slots[i].empty) {
+      table->slots[i].key = key;
+      table->slots[i].value = value;
+      table->slots[i].empty = false;
+      table->numItems++;
+      return;
+    }
+
+    if (table->slots[i].key == key) {
+      table->slots[i].value = value;
+      return;
+    }
+    i = (i + 1) % table->numSlots;
+  }
+}
+
 /*
 Backshift - remove and reinserts all item between the deleted item and the next empty slot
 */
