@@ -64,6 +64,25 @@ void HashTableInsert(HashTable table, int key, int value) {
 /*
 Backshift - remove and reinserts all item between the deleted item and the next empty slot
 */
+void HashTableDelete(HashTable table, int key) {
+  if(!HashTableContains(table, key)) return;
+
+  int i = hash(key, table->numSlots);
+  int prev = i;
+  table->slots[i++].empty = true;
+  table->numItems--;
+  for (int j = 0; j < table->numSlots - 1; j++) {
+    if (!table->slots[i].empty && 
+        hash(key, table->numSlots) == hash(table->slots[i].key, table->numSlots)) {
+      table->slots[prev].key = table->slots[i].key;
+      table->slots[prev].value = table->slots[i].value;
+      table->slots[i].empty = true;
+      table->slots[prev].empty = false;
+    }
+
+    i = (i + 1) % table->numSlots;
+  }
+}
 
 /*
 Tombstone - replace the deletd item a deleted marker, treated as empty during insertion and occupied during lookup
